@@ -35,6 +35,7 @@ class PlacesController < ApplicationController
 	def show
 
 		@place = Place.find(params[:id])
+		@comment = Comment.new
 
 	end
 
@@ -69,7 +70,7 @@ class PlacesController < ApplicationController
   	else
 
     	render :edit, status: :unprocessable_entity
-    	
+
   	end
 
 	end
