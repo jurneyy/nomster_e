@@ -1,11 +1,10 @@
 <div class="booyah-box col-10 offset-1">
-
 	<h1><%= @place.name %></h1>
 	<i><%= @place.address %></i>
 	<br/><br/>
 	<p><%= @place.description %></p>
 
-<% if @place.latitude.present? && @place.longitude.present? %>
+	<% if @place.latitude.present? && @place.longitude.present? %>
 
   <script>
 
@@ -43,7 +42,6 @@
 	</div>
 </div>
 
-
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -68,7 +66,6 @@
   </div>
 </div>
 
-
 	<div class="col-10 offset-1">
 	<h1 class="float-left">Comments</h1>
 	<!-- Button trigger modal -->
@@ -76,9 +73,7 @@
 	  Add a comment
 	</button>
 
-
 <div class="clear"></div>
-
 <div class="row">
 	<% @place.comments.each do |comment| %>
 	  <div class="col-12 col-sm-6">
@@ -92,8 +87,6 @@
 	  </div>
 	<% end %>
 </div>
-
-<div class="booyah-box">
 
 <!-- Modal -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -119,15 +112,15 @@
   </div>
 </div>
 
+<br />
+
 <h1 class="float-left">Pictures</h1>
-<div class="col-10 offset-1">
+<div class="modal-footer">
 <!-- Button trigger modal -->
 	<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal2">
   	Add a picture
 	</button>
 </div>
-
-<div class="clear"></div>
 
 <% @place.photos.each do |photo| %>
 	<div class="col-12 col-sm-6">
