@@ -1,5 +1,5 @@
 class Place < ApplicationRecord
-
+ #dependant_destory
 	belongs_to :user
 	has_many :comments
 	has_many :photos
